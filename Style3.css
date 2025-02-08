@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(love.jpg) ;
+  background-repeat: no-repeat;
+  background-size:cover ;
+}
+.envelope {
+  position:relative;
+  cursor: pointer;
+}
+
+.back {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  background: #aa4781;
+}
+.front {
+  position: absolute;
+  border-right: 130px solid #c05a85;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 120px;
+  z-index: 3;
+}
+.front:before {
+  content: "";
+  position: absolute;
+  border-left: 130px solid #c05a85;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  height: 0;
+  width: 0;
+  top: -100px;
+  left: -120px;
+}
+.front:after {
+  content: "";
+  position: absolute;
+  border-bottom: 105px solid #b55186;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -120px;
+}
+.top {
+  position: absolute;
+  border-top: 105px solid #cb6389;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.9s;
+}
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+.letter {
+  position: absolute;
+  background: rgb(255, 183, 121);
+  width: 230px;
+  height: 180px;
+  top: 10px;
+  left: 10px;
+  transition: 0.5s;
+}
+.envelope:hover .letter {
+  transform: translateY(-100px);
+  z-index: 2;
+}
+.text1 {
+  position: absolute;
+  color: rgb(71, 71, 71);
+  font-family: sans-serif;
+  top: -70%;
+}
+.text {
+  text-align: center;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  top: -30px;
+  left: 50px;
+}
+
+/*---heart -----*/
+.heart {
+  background-color: red;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 30px;
+  left:30px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: untoldcoding 0.8s linear infinite;
+}
+
+@keyframes untoldcoding {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  top: -40px;
+  border-radius: 50px;
+}
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  right: -40px;
+  border-radius: 50px;
+}
+.container {
+  text-align: center;
+}
+
+.glow-on-hover {
+  background-color: #ffb2b2;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 1px px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #ff1e1e, 0 0 10px #621eff, 0 0 15px #ffff00, 0 0 20px #291eff;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 10px #1e40ff, 0 0 20px #1e4fff, 0 0 30px #1e90ff, 0 0 40px #1e90ff;
+  transform: scale(1.05);
+}

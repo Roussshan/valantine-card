@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(paper2.jpg) ;
+}
+
+.greeting-box {
+  background-color: #ffb442;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(255, 50, 50, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 2.0s forwards;
+}
+
+.greeting-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+
+}
+
+.greeting-title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.greeting-message {
+  font-size: 16px;
+  color: #520000;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
